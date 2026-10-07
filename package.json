@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "catalog": "node scripts/build-catalog.mjs",
-    "predev": "node scripts/build-catalog.mjs",
     "dev": "vite",
-    "prebuild": "node scripts/build-catalog.mjs",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },

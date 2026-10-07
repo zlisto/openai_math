@@ -11,6 +11,15 @@ const root = path.resolve(siteRoot, '..') // math/ repo root
 const contentsPath = path.join(root, 'CONTENTS.md')
 const outPath = path.join(siteRoot, 'public', 'catalog.json')
 
+if (!fs.existsSync(contentsPath)) {
+  if (fs.existsSync(outPath)) {
+    console.log(`No CONTENTS.md at ${contentsPath}; keeping existing ${outPath}`)
+    process.exit(0)
+  }
+  console.error(`Missing ${contentsPath} and no existing catalog.json`)
+  process.exit(1)
+}
+
 const md = fs.readFileSync(contentsPath, 'utf8')
 
 /** @typedef {{ id: string, title: string, summary: string, lean?: string, papers: Paper[] }} Family */

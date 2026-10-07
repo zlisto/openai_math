@@ -8,14 +8,16 @@ PDFs are loaded from the public `openai/math` repo (via jsDelivr). This reposito
 
 ## Local development
 
-Clone or use alongside a local copy of `openai/math` (PDFs served from the parent folder in dev):
-
 ```bash
 npm install
 npm run dev
 ```
 
 Open http://localhost:5174/
+
+PDFs load from jsDelivr (`openai/math`) in both dev and production, so you do **not** need a local clone of that repo.
+
+Optional: to serve PDFs from a sibling `openai/math` checkout via the Vite middleware, set `VITE_PDF_ORIGIN=/` and put the math repo one level above this project.
 
 ## Deploy
 

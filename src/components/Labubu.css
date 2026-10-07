@@ -1,0 +1,25 @@
+.labubu {
+  display: inline-block;
+  line-height: 0;
+}
+
+.labubu svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 14px 28px #ff2d9544);
+}
+
+.labubu--float {
+  animation: labubu-float 4.5s ease-in-out infinite;
+}
+
+@keyframes labubu-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

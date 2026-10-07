@@ -1,0 +1,148 @@
+.family-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.family {
+  border: 1px solid var(--pink-dim);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #12060c, #0a0a0a);
+  overflow: hidden;
+}
+
+.family.is-open {
+  border-color: var(--pink);
+  box-shadow: 0 8px 28px #ff2d9518;
+}
+
+.family__head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.85rem;
+  align-items: start;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 1rem 1.1rem;
+}
+
+.family__head:hover {
+  background: #160810;
+}
+
+.family__id {
+  font-weight: 900;
+  color: var(--pink);
+  font-size: 1.05rem;
+  min-width: 2.4rem;
+  padding-top: 0.1rem;
+}
+
+.family__title {
+  display: block;
+  font-weight: 750;
+  font-size: 1.08rem;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.family__summary {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.family__count {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--pink-hot);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.family__chev {
+  color: var(--pink);
+  font-size: 1.1rem;
+  padding-top: 0.15rem;
+}
+
+.family__body {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--pink-dim);
+}
+
+.trace-link {
+  margin: 0.85rem 0 0.5rem;
+  border: 1px dashed var(--pink);
+  background: #1a0a12;
+  color: var(--pink-hot);
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+}
+
+.paper-list {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.paper {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #2a1520;
+  border-radius: 10px;
+  background: #080508;
+  color: inherit;
+  padding: 0.85rem 0.95rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.paper:hover:not(:disabled) {
+  border-color: var(--pink);
+}
+
+.paper.is-active {
+  border-color: var(--pink);
+  background: #1a0a12;
+  box-shadow: inset 0 0 0 1px var(--pink-dim);
+}
+
+.paper.is-missing {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.paper__title {
+  font-weight: 700;
+  color: var(--pink-hot);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.paper__abs {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.paper__path {
+  color: #7a5568;
+  font-size: 0.75rem;
+  word-break: break-all;
+  font-family: ui-monospace, Consolas, monospace;
+}

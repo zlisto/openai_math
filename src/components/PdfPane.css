@@ -1,0 +1,76 @@
+.pdf-pane {
+  height: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.pdf-pane__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: #0c070a;
+}
+
+.pdf-pane__label {
+  margin: 0;
+  color: var(--pink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.pdf-pane__title {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  max-width: 40rem;
+}
+
+.pdf-pane__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.pdf-btn {
+  border: 1px solid var(--pink);
+  background: linear-gradient(120deg, var(--pink), #c2185b);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.pdf-btn.ghost {
+  background: transparent;
+  color: var(--pink-hot);
+}
+
+.pdf-btn.close {
+  background: #1a0a12;
+  color: var(--muted);
+  border-color: #3a2030;
+}
+
+.pdf-btn:hover {
+  filter: brightness(1.08);
+}
+
+.pdf-pane__frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #111;
+  min-height: 0;
+}

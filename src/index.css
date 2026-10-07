@@ -1,0 +1,70 @@
+:root {
+  --bg: #050505;
+  --bg-elevated: #0c070a;
+  --pink: #ff2d95;
+  --pink-dim: #ff2d9533;
+  --pink-hot: #ff6eb4;
+  --text: #f5eef2;
+  --muted: #c4a8b6;
+  --border: #ff2d9544;
+  --font-sm: 0.95rem;
+  --font-md: 1.05rem;
+  --lh: 1.55;
+
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: var(--lh);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 10% -10%, #2a0a1a 0%, transparent 40%),
+    radial-gradient(ellipse at 100% 80%, #1a0512 0%, var(--bg) 50%);
+  min-height: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: var(--pink-hot);
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a1830;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink);
+}

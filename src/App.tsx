@@ -82,6 +82,14 @@ export default function App() {
 
   const collapseAll = () => setExpanded(new Set())
 
+  const goHome = () => {
+    setViewer(null)
+    setQuery('')
+    setShowTracesOnly(false)
+    setExpanded(new Set())
+    window.scrollTo(0, 0)
+  }
+
   if (error) {
     return (
       <div className="boot-error">
@@ -106,9 +114,16 @@ export default function App() {
   return (
     <div className={`app ${split ? 'is-split' : ''}`}>
       <header className="topbar">
-        <div className="brand-block">
-          <p className="eyebrow">OpenAI · Math collection</p>
-          <h1 className="brand">Paper Navigator</h1>
+        <div className="topbar__row">
+          <button type="button" className="brand-block" onClick={goHome}>
+            <p className="eyebrow">OpenAI · Math collection</p>
+            <h1 className="brand">Paper Navigator</h1>
+          </button>
+          <nav className="nav" aria-label="Main">
+            <button type="button" className="nav__link is-active" onClick={goHome}>
+              Home
+            </button>
+          </nav>
         </div>
         <div className="stats">
           <span>
